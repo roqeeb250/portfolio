@@ -1,67 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kareem Roqeeb's student portfolio at Miva Open University.">
-  <title>Kareem Roqeeb | Student Portfolio</title>
+
+  <meta name="description" content="The personal portfolio of Kareem Roqeeb, a computing student and aspiring web developer.">
+
+  <title>Kareem Roqeeb | Web Developer Portfolio</title>
+
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <a class="logo" href="index.html">KR<span>.</span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <button class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
     <nav class="nav-links" aria-label="Main navigation">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="#skills">Skills</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+
   <main>
+
+    <!-- HERO SECTION -->
     <section class="hero">
-      <p class="eyebrow">STUDENT PORTFOLIO</p>
-      <h1>Hello, I'm <span>Kareem Roqeeb.</span></h1>
-      <p class="hero-copy">I am a student at Miva Open University, learning computing and building my skills in web development.</p>
-      <div class="button-row">
-        <a class="button primary" href="about.html">About me</a>
-        <a class="button secondary" href="projects.html">View my learning</a>
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          COMPUTING STUDENT · ASPIRING WEB DEVELOPER
+        </p>
+
+        <h1>
+          Turning curiosity into
+          <span>meaningful digital experiences.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Hello, I'm Kareem Roqeeb. A computing student at
+          Miva Open University with an interest in technology,
+          creativity and building for the web.
+        </p>
+
+        <div class="button-row">
+          <a class="button primary" href="projects.html">
+            Explore my work
+          </a>
+
+          <a class="button secondary" href="about.html">
+            Get to know me
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          Curious mind. Creative thinking. Continuous growth.
+        </div>
+
       </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-circle circle-one"></div>
+        <div class="visual-circle circle-two"></div>
+        <div class="visual-circle circle-three"></div>
+
+        <div class="visual-content">
+          <span class="visual-symbol">&lt;/&gt;</span>
+          <p>Ideas into reality.</p>
+        </div>
+      </div>
+
     </section>
 
-    <section class="section">
+
+    <!-- INTRODUCTION -->
+    <section class="section introduction">
       <div class="section-heading">
-        <p class="eyebrow">GET TO KNOW ME</p>
-        <h2>My learning journey</h2>
+        <p class="eyebrow">A LITTLE ABOUT MY WORLD</p>
+        <h2>Driven by curiosity. Inspired by possibilities.</h2>
       </div>
+
+      <p class="intro-copy">
+        I believe knowledge becomes more meaningful when it is
+        put into practice. My journey in computing is an opportunity
+        to explore ideas, develop useful skills and create things
+        that make a difference.
+      </p>
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+
+      <div class="section-heading">
+        <p class="eyebrow">MY TOOLKIT</p>
+        <h2>Skills & Technologies</h2>
+        <p>
+          Technologies and tools that form part of my
+          computing journey.
+        </p>
+      </div>
+
       <div class="card-grid">
+
+        <article class="card skill-card">
+          <div class="card-icon">&lt;/&gt;</div>
+          <h3>HTML</h3>
+          <p>
+            Building structured and meaningful web pages
+            using HTML elements.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="card-icon">✳</div>
+          <h3>CSS</h3>
+          <p>
+            Creating visual styles, layouts and responsive
+            website designs.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="card-icon">{ }</div>
+          <h3>JavaScript</h3>
+          <p>
+            Working with programming concepts and
+            interactive web experiences.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="card-icon">⌘</div>
+          <h3>Git & GitHub</h3>
+          <p>
+            Managing code, tracking changes and
+            hosting web projects.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPLORE SECTION -->
+    <section class="section">
+
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE MY PORTFOLIO</p>
+        <h2>More about me</h2>
+      </div>
+
+      <div class="card-grid">
+
         <article class="card">
           <div class="card-icon">01</div>
-          <h3>About me</h3>
-          <p>Learn about my education, interests, and goals as a computing student.</p>
-          <a class="text-link" href="about.html">Read more →</a>
+          <h3>My Story</h3>
+          <p>
+            Discover my background, interests, education
+            and personal ambitions.
+          </p>
+          <a class="text-link" href="about.html">
+            Discover more →
+          </a>
         </article>
+
         <article class="card">
           <div class="card-icon">02</div>
-          <h3>What I'm learning</h3>
-          <p>Explore the subjects and beginner web-development skills I am practising.</p>
-          <a class="text-link" href="projects.html">Explore learning →</a>
+          <h3>My Projects</h3>
+          <p>
+            Explore selected projects and practical work
+            from my computing journey.
+          </p>
+          <a class="text-link" href="projects.html">
+            View projects →
+          </a>
         </article>
+
         <article class="card">
           <div class="card-icon">03</div>
-          <h3>Get in touch</h3>
-          <p>Visit the contact page for details on how to connect with me.</p>
-          <a class="text-link" href="contact.html">Contact me →</a>
+          <h3>Let's Connect</h3>
+          <p>
+            Get in touch and connect with me through
+            my contact page.
+          </p>
+          <a class="text-link" href="contact.html">
+            Contact me →
+          </a>
         </article>
+
       </div>
+
     </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="section closing-section">
+      <p class="eyebrow">THANK YOU FOR VISITING</p>
+      <h2>Every great idea starts somewhere.</h2>
+      <p>
+        I'm looking forward to discovering new possibilities,
+        building meaningful things and growing through every experience.
+      </p>
+
+      <a class="button primary" href="contact.html">
+        Get in touch →
+      </a>
+    </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© <span class="year"></span> Kareem Roqeeb · Student Portfolio</p>
-    <p>Built with HTML, CSS and JavaScript.</p>
+    <p>
+      © <span class="year"></span> Kareem Roqeeb.
+      All rights reserved.
+    </p>
+
+    <p>Designed with intention. Built with code.</p>
   </footer>
+
 </body>
 </html>
