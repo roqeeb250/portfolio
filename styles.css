@@ -94,6 +94,242 @@ h2 { line-height: 1.25; }
   .profile-photo {
     width: 220px;
     height: 275px;
+
+    
+
+
+/* Homepage hero layout */
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 3rem;
+  min-height: 560px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-content {
+  max-width: 590px;
+}
+
+.hero h1 {
+  max-width: 650px;
+}
+
+.hero-tagline {
+  margin-top: 1.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Abstract hero artwork */
+.hero-visual {
+  min-height: 380px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 70% 30%, #ffffff 0 8%, transparent 9%),
+    linear-gradient(145deg, #eaf0ff, #cbd9ff 55%, #3157d5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.visual-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.visual-symbol {
+  display: block;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.visual-content p {
+  font-weight: 700;
+}
+
+.visual-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.circle-one {
+  width: 280px;
+  height: 280px;
+}
+
+.circle-two {
+  width: 210px;
+  height: 210px;
+}
+
+.circle-three {
+  width: 140px;
+  height: 140px;
+  background: rgba(255,255,255,0.12);
+}
+
+/* General card improvements */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(23, 32, 51, 0.09);
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card h3,
+.card h2 {
+  color: var(--text);
+}
+
+/* About page */
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 0;
+}
+
+.about-hero-content {
+  max-width: 600px;
+}
+
+.about-intro {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-photo {
+  text-align: center;
+}
+
+.photo-caption {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.about-story {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.about-heading {
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+
+.about-heading h2 {
+  font-size: 2rem;
+}
+
+.about-text {
+  max-width: 800px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.value-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.value-card > span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.value-card p {
+  color: var(--muted);
+}
+
+.about-cta {
+  margin-top: 3rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--soft-blue);
+}
+
+.about-cta p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .hero,
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+  }
+
+  .about-hero {
+    padding: 3rem 0;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta {
+    padding: 2rem 1.2rem;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
     margin: 0 auto;
   }
 }
