@@ -1,62 +1,125 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   CONTACT FORM BOX
+  <meta name="description" content="Get in touch with Kareem Roqeeb.">
+
+  <title>Contact | Kareem Roqeeb</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a class="logo" href="index.html">KR<span>.</span></a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+
+  </header>
 
 
-.content-panel {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto 4rem;
-  padding: 2.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(23, 32, 51, .07);
-}
+  <!-- CONTACT CONTENT -->
+  <main class="page-main">
 
-.content-panel h2 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-}
+    <section class="page-intro">
 
-.content-panel > p {
-  margin-bottom: 2rem;
-}
+      <p class="eyebrow">GET IN TOUCH</p>
 
-.content-panel form {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 12px;
-}
+      <h1>Let's start a <span>conversation.</span></h1>
 
-.content-panel label {
-  display: block;
-  font-weight: 700;
-  color: var(--text);
-  margin-top: 8px;
-}
+      <p>
+        Have an interesting idea, a project in mind, or simply want to connect?
+        I'd be glad to hear from you. Send me a message using the form below.
+      </p>
 
-.content-panel input:not([type="hidden"]),
-.content-panel textarea {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--background);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 1rem;
-}
+    </section>
 
-.content-panel textarea {
-  min-height: 160px;
-  resize: vertical;
-}
 
-.content-panel form button {
-  align-self: flex-start;
-  margin-top: 15px;
-  cursor: pointer;
-}
+    <!-- CONTACT FORM BOX -->
+    <section class="content-panel">
+
+      <h2>Send me a message</h2>
+
+      <p>Fill in the details below and I'll get back to you.</p>
+
+      <form action="https://formsubmit.co/YOUR_SCHOOL_EMAIL" method="POST">
+
+        <input type="hidden" name="_subject" value="New message from your portfolio">
+
+        <input type="hidden" name="_template" value="table">
+
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        >
+
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="What is your message about?"
+          required
+        >
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+        <button type="submit" class="button primary">
+          Send Message →
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <p>© <span class="year"></span> Kareem Roqeeb. All rights reserved.</p>
+
+    <p>Always open to meaningful connections.</p>
+
+  </footer>
+
+</body>
+</html>
