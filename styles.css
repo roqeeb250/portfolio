@@ -341,7 +341,6 @@ h2 {
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,.5);
   animation: circle-pulse 6s ease-in-out infinite;
-   animation: circle-pulse 6s ease-in-out infinite;
 }
 
 .circle-one {
