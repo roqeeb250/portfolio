@@ -1,116 +1,32 @@
+<form id="task-form">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <label for="task-input">Task Name</label>
 
-  <title>Academic Planner | Kareem Roqeeb</title>
+  <input
+    type="text"
+    id="task-input"
+    placeholder="e.g. Complete MTH102 assignment"
+    required
+  >
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
+  <label for="task-date">Due Date</label>
 
-<body>
- 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
+  <input
+    type="date"
+    id="task-date"
+    required
+  >
 
-      <a href="index.html" class="logo">KR<span>.</span></a>
+  <label for="task-time">Due Time</label>
 
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-        ☰
-      </button>
+  <input
+    type="time"
+    id="task-time"
+    required
+  >
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="planner.html" class="active">Planner</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <button type="submit" class="button primary">
+    Add Task
+  </button>
 
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <!-- PLANNER INTRODUCTION -->
-    <section class="page-intro">
-      <div class="container">
-
-        <p class="eyebrow">STAY ORGANIZED</p>
-
-        <h1>My Academic <span>Planner.</span></h1>
-
-        <p>
-          Keep track of your academic tasks, organize your study activities
-          and monitor your progress.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- ACADEMIC TASK MANAGER -->
-    <section class="section planner-section">
-
-      <div class="section-heading">
-        <p class="eyebrow">MY STUDY ACTIVITIES</p>
-        <h2>Manage Your Academic Tasks</h2>
-        <p>
-          Add your assignments, reading activities and
-          upcoming academic responsibilities.
-        </p>
-      </div>
-
-      <div class="planner-container">
-
-        <form id="task-form">
-
-          <label for="task-input">Enter an academic task</label>
-
-          <input
-            type="text"
-            id="task-input"
-            placeholder="e.g. Complete MTH102 assignment"
-          >
-
-          <button type="submit" class="button primary">
-            Add Task
-          </button>
-
-        </form>
-
-        <div class="task-list-container">
-
-          <h3>My Tasks</h3>
-
-          <ul id="task-list">
-          </ul>
-
-          <p id="empty-message">
-            No tasks added yet. Start by adding your first task.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>
-      © <span class="year"></span> Kareem Roqeeb.
-      All rights reserved.
-    </p>
-    <p>Designed with intention. Built with code.</p>
-  </footer>
-
-</body>
-</html>
+</form>
