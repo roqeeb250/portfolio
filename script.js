@@ -1,62 +1,20 @@
 
 /* =================================
-   MOBILE NAVIGATION
-================================= */
-
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector(".nav-links");
-
-if (menuButton && navigation) {
-
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.textContent = isOpen ? "✕" : "☰";
-  });
-
-  // CLOSE MENU AFTER CLICKING A NAVIGATION LINK
-  navigation.querySelectorAll("a").forEach((link) => {
-
-    link.addEventListener("click", () => {
-      navigation.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.textContent = "☰";
-    });
-
-  });
-
-}
-
-
-/* =================================
-   AUTOMATIC COPYRIGHT YEAR
-================================= */
-
-document.querySelectorAll(".year").forEach((element) => {
-  element.textContent = new Date().getFullYear();
-});
-
-
-/* =================================
    ACADEMIC PLANNER
 ================================= */
 
 // GET THE HTML ELEMENTS
-
 const taskForm = document.querySelector("#task-form");
 const taskInput = document.querySelector("#task-input");
+const taskDate = document.querySelector("#task-date");
+const taskTime = document.querySelector("#task-time");
 const taskList = document.querySelector("#task-list");
 const emptyMessage = document.querySelector("#empty-message");
 
-
 // STORE ACADEMIC TASKS
-
 let tasks = JSON.parse(localStorage.getItem("academicTasks")) || [];
 
-
 // DISPLAY TASKS
-
 function displayTasks() {
 
   if (!taskList || !emptyMessage) {
@@ -65,12 +23,15 @@ function displayTasks() {
 
   taskList.innerHTML = "";
 
-  emptyMessage.style.display = tasks.length === 0 ? "block" : "none";
+  emptyMessage.style.display =
+    tasks.length === 0 ? "block" : "none";
 
   tasks.forEach((task, index) => {
 
+    // CREATE TASK CONTAINER
     const listItem = document.createElement("li");
 
+    // DISPLAY TASK NAME
     const taskText = document.createElement("span");
     taskText.textContent = task.name;
 
@@ -79,12 +40,39 @@ function displayTasks() {
       taskText.style.color = "#8993a5";
     }
 
+    // DISPLAY TASK DATE AND TIME
+    const deadline = document.createElement("p");
+
+    if (task.date && task.time) {
+
+      const dueDate = new Date(
+        `${task.date}T${task.time}`
+      );
+
+      deadline.textContent =
+        "📅 " + dueDate.toLocaleString();
+
+    } else {
+      deadline.textContent = "No deadline set";
+    }
+
+    // CHECK IF TASK IS OVERDUE
+    const status = document.createElement("span");
+
+    if (
+      !task.completed &&
+      task.date &&
+      task.time &&
+      new Date(`${task.date}T${task.time}`) < new Date()
+    ) {
+      status.textContent = "⚠️ OVERDUE";
+    }
 
     // COMPLETE BUTTON
-
     const completeButton = document.createElement("button");
 
-    completeButton.textContent = task.completed ? "Undo" : "Complete";
+    completeButton.textContent =
+      task.completed ? "Undo" : "Complete";
 
     completeButton.addEventListener("click", () => {
 
@@ -94,9 +82,7 @@ function displayTasks() {
 
     });
 
-
     // DELETE BUTTON
-
     const deleteButton = document.createElement("button");
 
     deleteButton.textContent = "Delete";
@@ -109,10 +95,10 @@ function displayTasks() {
 
     });
 
-
-    // ADD ELEMENTS TO THE TASK LIST
-
+    // ADD ELEMENTS TO THE TASK
     listItem.appendChild(taskText);
+    listItem.appendChild(deadline);
+    listItem.appendChild(status);
     listItem.appendChild(completeButton);
     listItem.appendChild(deleteButton);
 
@@ -122,21 +108,20 @@ function displayTasks() {
 
 }
 
-
 // SAVE TASKS
-
 function saveTasks() {
 
-  localStorage.setItem("academicTasks", JSON.stringify(tasks));
+  localStorage.setItem(
+    "academicTasks",
+    JSON.stringify(tasks)
+  );
 
   displayTasks();
 
 }
 
-
 // ADD A NEW TASK
-
-if (taskForm && taskInput) {
+if (taskForm && taskInput && taskDate && taskTime) {
 
   taskForm.addEventListener("submit", (event) => {
 
@@ -144,28 +129,33 @@ if (taskForm && taskInput) {
 
     const taskName = taskInput.value.trim();
 
-    if (taskName === "") {
-
-      alert("Please enter an academic task.");
-
+    if (
+      taskName === "" ||
+      taskDate.value === "" ||
+      taskTime.value === ""
+    ) {
+      alert("Please complete all task fields.");
       return;
-
     }
 
+    // ADD TASK TO THE ARRAY
     tasks.push({
+
       name: taskName,
+      date: taskDate.value,
+      time: taskTime.value,
       completed: false
+
     });
 
     saveTasks();
 
-    taskInput.value = "";
+    // CLEAR THE FORM
+    taskForm.reset();
 
   });
 
 }
 
-
 // SHOW SAVED TASKS WHEN THE PAGE OPENS
-
 displayTasks();
