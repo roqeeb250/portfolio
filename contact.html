@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Connect with Kareem Roqeeb, web developer and technology enthusiast.">
+  <meta name="description" content="Get in touch with Kareem Roqeeb.">
 
   <title>Contact | Kareem Roqeeb</title>
 
@@ -49,28 +49,72 @@
       <p>
         Have an interesting idea, a project in mind,
         or simply want to connect? I'd be glad to hear
-        from you. I'm always open to meaningful
-        conversations and new opportunities.
+        from you. Send me a message using the form below.
       </p>
     </section>
 
-    <!-- CONTACT INFORMATION -->
+    <!-- CONTACT FORM -->
     <section class="content-panel">
 
-      <h2>Find me online</h2>
+      <h2>Send me a message</h2>
 
       <p>
-        You can explore my work, follow my progress
-        and connect with me through GitHub.
+        Fill in the details below and I'll get back to you.
       </p>
 
-      <a
-        href="https://github.com/roqeeb250"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button primary">
-        Visit my GitHub →
-      </a>
+      <form
+        action="https://formsubmit.co/YOUR_SCHOOL_EMAIL"
+        method="POST">
+
+        <!-- EMAIL SETTINGS -->
+        <input type="hidden" name="_subject"
+          value="New message from your portfolio">
+
+        <input type="hidden" name="_template"
+          value="table">
+
+        <!-- VISITOR NAME -->
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required>
+
+        <!-- VISITOR EMAIL -->
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required>
+
+        <!-- SUBJECT -->
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="What is your message about?"
+          required>
+
+        <!-- MESSAGE -->
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Write your message here..."
+          required></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="button primary">
+          Send Message →
+        </button>
+
+      </form>
 
     </section>
 
