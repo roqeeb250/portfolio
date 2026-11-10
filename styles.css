@@ -720,3 +720,15 @@ button {
     height: 240px;
   }
 }
+/* Homepage photo: show the face clearly */
+.hero .hero-visual .hero-photo {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 10%;   /* lower number = shows more of the top of the photo */
+}
+
+/* About page photo */
+.profile-photo {
+  object-position: center 10%;
+}
