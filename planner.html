@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,6 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-
-<body>
 
 <body>
 
@@ -36,9 +35,10 @@
     </div>
   </header>
 
-  <!-- PLANNER INTRODUCTION -->
+  <!-- MAIN CONTENT -->
   <main>
 
+    <!-- PLANNER INTRODUCTION -->
     <section class="page-intro">
       <div class="container">
 
@@ -54,9 +54,63 @@
       </div>
     </section>
 
+    <!-- ACADEMIC TASK MANAGER -->
+    <section class="section planner-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">MY STUDY ACTIVITIES</p>
+        <h2>Manage Your Academic Tasks</h2>
+        <p>
+          Add your assignments, reading activities and
+          upcoming academic responsibilities.
+        </p>
+      </div>
+
+      <div class="planner-container">
+
+        <form id="task-form">
+
+          <label for="task-input">Enter an academic task</label>
+
+          <input
+            type="text"
+            id="task-input"
+            placeholder="e.g. Complete MTH102 assignment"
+          >
+
+          <button type="submit" class="button primary">
+            Add Task
+          </button>
+
+        </form>
+
+        <div class="task-list-container">
+
+          <h3>My Tasks</h3>
+
+          <ul id="task-list">
+          </ul>
+
+          <p id="empty-message">
+            No tasks added yet. Start by adding your first task.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-</body>
-  
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      © <span class="year"></span> Kareem Roqeeb.
+      All rights reserved.
+    </p>
+    <p>Designed with intention. Built with code.</p>
+  </footer>
+
 </body>
 </html>
