@@ -2,127 +2,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Get in touch with Kareem Roqeeb.">
-
-  <title>Contact | Kareem Roqeeb</title>
-
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | PixelCraft Studio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a class="logo" href="index.html">KR<span>.</span></a>
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">PixelCraft<span>.</span></a>
 
-    <button class="menu-toggle"
-      aria-label="Toggle navigation"
-      aria-expanded="false">
-      ☰
-    </button>
+            <button class="menu-toggle" aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="index.html#skills">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a class="active" href="contact.html">Contact</a>
-    </nav>
-  </header>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-main">
+    <!-- CONTACT SECTION -->
+    <main>
+        <section class="contact-section">
 
-    <section class="page-intro">
-      <p class="eyebrow">GET IN TOUCH</p>
+            <div class="contact-container">
 
-      <h1>
-        Let's start a
-        <span>conversation.</span>
-      </h1>
+                <div class="contact-info">
+                    <p class="section-tag">GET IN TOUCH</p>
 
-      <p>
-        Have an interesting idea, a project in mind,
-        or simply want to connect? I'd be glad to hear
-        from you. Send me a message using the form below.
-      </p>
-    </section>
+                    <h1>Let's talk about your next idea.</h1>
 
-    <!-- CONTACT FORM -->
-    <section class="content-panel">
+                    <p>
+                        Have a question or a project in mind?
+                        Send us a message. We would love to hear
+                        what you are thinking about.
+                    </p>
 
-      <h2>Send me a message</h2>
+                    <h2>Contact Information</h2>
 
-      <p>
-        Fill in the details below and I'll get back to you.
-      </p>
+                    <p>
+                        <strong>Email:</strong>
+                        hello@pixelcraft.com
+                    </p>
 
-      <form
-        action="https://formsubmit.co/r.kareem1437@miva.edu.ng"
-        method="POST">
+                    <p>
+                        <strong>Phone:</strong>
+                        +2347017463806
+                    </p>
 
-        <input type="hidden" name="_subject"
-          value="New message from your portfolio">
+                    <p>
+                        <strong>Location:</strong>
+                        Nigeria
+                    </p>
+                </div>
 
-        <input type="hidden" name="_template"
-          value="table">
+                <!-- CONTACT FORM -->
+                <div class="contact-form-container">
 
-        <label for="name">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your full name"
-          required>
+                    <h2>Send Us a Message</h2>
 
-        <label for="email">Your Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required>
+                    <form
+                        id="contact-form"
+                        action="https://formspree.io/f/mjywkegb"
+                        method="POST"
+                    >
 
-        <label for="subject">Subject</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          placeholder="What is your message about?"
-          required>
+                        <!-- NAME -->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
 
-        <label for="message">Your Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          placeholder="Write your message here..."
-          required></textarea>
+                        <!-- EMAIL -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+                        </div>
 
-        <button type="submit" class="button primary">
-          Send Message →
-        </button>
+                        <!-- PHONE NUMBER -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                inputmode="numeric"
+                                required
+                            >
+                        </div>
 
-      </form>
- 
-    </section>
+                        <!-- MESSAGE -->
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+                        </div>
 
-  </main>
+                        <button type="submit" class="btn">
+                            Send Message
+                        </button>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>
-      © <span class="year"></span> Kareem Roqeeb.
-      All rights reserved.
-    </p>
+                        <p id="form-status" aria-live="polite"></p>
 
-    <p>Always open to meaningful connections.</p>
-  </footer>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 PixelCraft Studio. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- CONTACT FORM VALIDATION -->
+    <script>
+        const contactForm = document.getElementById("contact-form");
+
+        if (contactForm) {
+            contactForm.addEventListener("submit", function(event) {
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                const status = document.getElementById("form-status");
+
+                // CHECK EMPTY FIELDS
+                if (!name || !email || !phone || !message) {
+                    event.preventDefault();
+                    status.textContent = "Please fill in all fields.";
+                    return;
+                }
+
+                // CHECK EMAIL FORMAT
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailPattern.test(email)) {
+                    event.preventDefault();
+                    status.textContent = "Please enter a valid email address.";
+                    return;
+                }
+
+                // CHECK PHONE NUMBER
+                const phonePattern = /^[0-9]+$/;
+
+                if (!phonePattern.test(phone)) {
+                    event.preventDefault();
+                    status.textContent = "Phone number must contain digits only.";
+                    return;
+                }
+
+                // ALLOW VALID FORM TO SUBMIT TO FORMSPREE
+                status.textContent = "Sending your message...";
+            });
+        }
+    </script>
 
 </body>
 </html>
-4 
