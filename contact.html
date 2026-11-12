@@ -5,384 +5,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | PixelCraft Studio</title>
+    <title>Contact | Kareem Roqeeb</title>
 
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* CONTACT PAGE */
-
-        .contact-section {
-            min-height: 85vh;
-            padding: 90px 7%;
-            background: #080d1b;
-            color: #ffffff;
-        }
-
-        .contact-container {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .contact-info .section-tag {
-            color: #06d6f0;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-bottom: 18px;
-        }
-
-        .contact-info h1 {
-            font-size: clamp(2.3rem, 5vw, 3.8rem);
-            line-height: 1.15;
-            margin-bottom: 25px;
-            color: #ffffff;
-        }
-
-        .contact-info > p:not(.section-tag) {
-            color: #b8c1d8;
-            line-height: 1.9;
-            font-size: 1.05rem;
-            margin-bottom: 30px;
-        }
-
-        .contact-info h2 {
-            font-size: 1.4rem;
-            margin: 35px 0 20px;
-            color: #ffffff;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin: 18px 0;
-            color: #c5cde0;
-        }
-
-        .contact-icon {
-            width: 43px;
-            height: 43px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(6, 214, 240, 0.12);
-            color: #06d6f0;
-            border-radius: 12px;
-            font-size: 1.2rem;
-        }
-
-        .contact-detail a {
-            color: #c5cde0;
-            text-decoration: none;
-        }
-
-        .contact-detail a:hover {
-            color: #06d6f0;
-        }
-
-        /* FORM */
-
-        .contact-form-container {
-            background: #111a2e;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
-        }
-
-        .contact-form-container h2 {
-            font-size: 1.8rem;
-            margin-bottom: 28px;
-            color: #ffffff;
-        }
-
-        .form-group {
-            margin-bottom: 22px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 9px;
-            color: #e4e9f5;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #303c56;
-            border-radius: 10px;
-            background: #0a1223;
-            color: #ffffff;
-            font-size: 1rem;
-            outline: none;
-            font-family: inherit;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #06d6f0;
-            box-shadow: 0 0 0 3px rgba(6,214,240,0.12);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 140px;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #77839d;
-        }
-
-        .contact-submit {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #7048ff, #06b6d4);
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .contact-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(6,182,212,0.25);
-        }
-
-        #form-status {
-            margin-top: 18px;
-            font-size: 0.95rem;
-            color: #06d6f0;
-        }
-
-        /* RESPONSIVE DESIGN */
-
-        @media (max-width: 800px) {
-            .contact-section {
-                padding: 65px 6%;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .contact-form-container {
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .contact-section {
-                padding: 45px 5%;
-            }
-
-            .contact-form-container {
-                padding: 22px;
-            }
-
-            .contact-info h1 {
-                font-size: 2.3rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">PixelCraft<span>.</span></a>
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
 
-            <button class="menu-toggle"
-                aria-label="Toggle navigation"
-                aria-expanded="false">
-                ☰
-            </button>
+        <a href="index.html" class="logo">
+            KR<span>.</span>
+        </a>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+        <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            type="button">
+            ☰
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
     </header>
 
-    <!-- CONTACT CONTENT -->
-    <main>
-        <section class="contact-section">
 
-            <div class="contact-container">
+    <!-- MAIN CONTENT -->
+    <main class="page-main">
 
-                <!-- CONTACT INFORMATION -->
-                <div class="contact-info">
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-intro">
 
-                    <p class="section-tag">GET IN TOUCH</p>
+            <p class="eyebrow">GET IN TOUCH</p>
 
-                    <h1>Let's talk about your next idea.</h1>
+            <h1>
+                Let's <span>Connect</span>
+            </h1>
 
-                    <p>
-                        Have a question or a project in mind?
-                        Send us a message. We would love to hear
-                        what you are thinking about.
-                    </p>
+            <p>
+                Have a question, an opportunity, or an idea you would
+                like to discuss? I would be happy to hear from you.
+                Feel free to send me a message using the form below.
+            </p>
 
-                    <h2>We are ready to hear from you.</h2>
+        </section>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">✉</div>
-                        <div>
-                            <strong>Email Address</strong><br>
-                            <a href="mailto:hello@pixelcraft.com">
-                                hello@pixelcraft.com
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">☎</div>
-                        <div>
-                            <strong>Phone Number</strong><br>
-                            <a href="tel:+2347017463806">
-                                +2347017463806
-                            </a>
-                        </div>
-                    </div>
+        <!-- CONTACT CONTENT -->
+        <section class="card-grid">
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">⌖</div>
-                        <div>
-                            <strong>Location</strong><br>
-                            Nigeria
-                        </div>
-                    </div>
+            <!-- CONTACT INFORMATION -->
+            <div class="card">
 
-                </div>
+                <div class="card-icon">✉</div>
 
-                <!-- CONTACT FORM -->
-                <div class="contact-form-container">
+                <h2>Let's Talk</h2>
 
-                    <h2>Send Us a Message</h2>
+                <p>
+                    I am open to conversations about web development,
+                    learning opportunities, collaboration and interesting
+                    projects.
+                </p>
 
-                    <form
-                        id="contact-form"
-                        action="https://formspree.io/f/mjywkegb"
-                        method="POST"
-                    >
+                <h3>What can we discuss?</h3>
 
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Enter your full name"
-                                required
-                            >
-                        </div>
+                <ul class="about-list">
+                    <li>Web development opportunities</li>
+                    <li>Project collaboration</li>
+                    <li>Questions and enquiries</li>
+                    <li>Professional connections</li>
+                </ul>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email address"
-                                required
-                            >
-                        </div>
+            </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="Enter your phone number"
-                                inputmode="numeric"
-                                required
-                            >
-                        </div>
 
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Write your message here..."
-                                required
-                            ></textarea>
-                        </div>
+            <!-- CONTACT FORM -->
+            <div class="card">
 
-                        <button type="submit" class="contact-submit">
-                            Send Message →
-                        </button>
+                <h2>Send Me a Message</h2>
 
-                        <p id="form-status" aria-live="polite"></p>
+                <p>
+                    Complete the form below and I'll be glad to hear from you.
+                </p>
 
-                    </form>
+                <form
+                    id="contact-form"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST">
 
-                </div>
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        inputmode="numeric"
+                        required>
+
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+
+                    <button type="submit" class="button primary">
+                        Send Message →
+                    </button>
+
+                    <p id="form-status" aria-live="polite"></p>
+
+                </form>
 
             </div>
 
         </section>
+
     </main>
 
+
     <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2026 PixelCraft Studio. All Rights Reserved.</p>
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Kareem Roqeeb. All Rights Reserved.
+        </p>
+
     </footer>
 
+
+    <!-- EXISTING JAVASCRIPT -->
     <script src="script.js"></script>
 
+
+    <!-- CONTACT FORM VALIDATION -->
     <script>
+
         const contactForm = document.getElementById("contact-form");
 
-        contactForm.addEventListener("submit", function(event) {
+        if (contactForm) {
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const message = document.getElementById("message").value.trim();
-            const status = document.getElementById("form-status");
+            contactForm.addEventListener("submit", function(event) {
 
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const phonePattern = /^[0-9]+$/;
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const message = document.getElementById("message").value.trim();
 
-            if (!name || !email || !phone || !message) {
-                event.preventDefault();
-                status.textContent = "Please fill in all fields.";
-                return;
-            }
+                const status = document.getElementById("form-status");
 
-            if (!emailPattern.test(email)) {
-                event.preventDefault();
-                status.textContent = "Please enter a valid email address.";
-                return;
-            }
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const phonePattern = /^[0-9]+$/;
 
-            if (!phonePattern.test(phone)) {
-                event.preventDefault();
-                status.textContent = "Phone number must contain digits only.";
-                return;
-            }
 
-            status.textContent = "Sending your message...";
-        });
+                // CHECK EMPTY FIELDS
+                if (!name || !email || !phone || !message) {
+
+                    event.preventDefault();
+
+                    status.textContent = "Please fill in all fields.";
+
+                    return;
+                }
+
+
+                // CHECK EMAIL FORMAT
+                if (!emailPattern.test(email)) {
+
+                    event.preventDefault();
+
+                    status.textContent = "Please enter a valid email address.";
+
+                    return;
+                }
+
+
+                // CHECK PHONE NUMBER
+                if (!phonePattern.test(phone)) {
+
+                    event.preventDefault();
+
+                    status.textContent = "Phone number must contain digits only.";
+
+                    return;
+                }
+
+
+                // VALID FORM
+                status.textContent = "Sending your message...";
+
+            });
+
+        }
+
     </script>
 
 </body>
