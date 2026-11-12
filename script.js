@@ -70,7 +70,6 @@ function displayTasks() {
     }
 
     // COMPLETE BUTTON
-   // COMPLETE BUTTON
 const completeButton = document.createElement("button");
 
 completeButton.type = "button";
