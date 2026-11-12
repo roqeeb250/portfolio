@@ -70,10 +70,13 @@ function displayTasks() {
     }
 
     // COMPLETE BUTTON
-    const completeButton = document.createElement("button");
+   // COMPLETE BUTTON
+const completeButton = document.createElement("button");
 
-    completeButton.textContent =
-      task.completed ? "Undo" : "Complete";
+completeButton.type = "button";
+
+completeButton.textContent =
+  task.completed ? "Undo" : "Complete";
 
     completeButton.addEventListener("click", () => {
 
