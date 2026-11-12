@@ -1,4 +1,40 @@
 
+/* =================================
+   HAMBURGER MENU
+================================= */
+
+// GET THE MENU ELEMENTS
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+// OPEN AND CLOSE THE MENU
+if (menuToggle && navLinks) {
+
+  menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("open");
+
+    const isOpen = navLinks.classList.contains("open");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+  });
+
+  // CLOSE MENU WHEN A LINK IS CLICKED
+  navLinks.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("open");
+
+      menuToggle.setAttribute("aria-expanded", "false");
+
+    });
+
+  });
+
+}
+
 
 /* =================================
    ACADEMIC PLANNER
@@ -34,11 +70,15 @@ function displayTasks() {
 
     // DISPLAY TASK NAME
     const taskText = document.createElement("span");
+
     taskText.textContent = task.name;
 
     if (task.completed) {
+
       taskText.style.textDecoration = "line-through";
+
       taskText.style.color = "#8993a5";
+
     }
 
     // DISPLAY TASK DATE AND TIME
@@ -54,7 +94,9 @@ function displayTasks() {
         "📅 " + dueDate.toLocaleString();
 
     } else {
+
       deadline.textContent = "No deadline set";
+
     }
 
     // CHECK IF TASK IS OVERDUE
@@ -66,16 +108,18 @@ function displayTasks() {
       task.time &&
       new Date(`${task.date}T${task.time}`) < new Date()
     ) {
+
       status.textContent = "⚠️ OVERDUE";
+
     }
 
     // COMPLETE BUTTON
-const completeButton = document.createElement("button");
+    const completeButton = document.createElement("button");
 
-completeButton.type = "button";
+    completeButton.type = "button";
 
-completeButton.textContent =
-  task.completed ? "Undo" : "Complete";
+    completeButton.textContent =
+      task.completed ? "Undo" : "Complete";
 
     completeButton.addEventListener("click", () => {
 
@@ -87,6 +131,8 @@ completeButton.textContent =
 
     // DELETE BUTTON
     const deleteButton = document.createElement("button");
+
+    deleteButton.type = "button";
 
     deleteButton.textContent = "Delete";
 
@@ -100,9 +146,13 @@ completeButton.textContent =
 
     // ADD ELEMENTS TO THE TASK
     listItem.appendChild(taskText);
+
     listItem.appendChild(deadline);
+
     listItem.appendChild(status);
+
     listItem.appendChild(completeButton);
+
     listItem.appendChild(deleteButton);
 
     taskList.appendChild(listItem);
@@ -110,6 +160,7 @@ completeButton.textContent =
   });
 
 }
+
 
 // SAVE TASKS
 function saveTasks() {
@@ -122,6 +173,7 @@ function saveTasks() {
   displayTasks();
 
 }
+
 
 // ADD A NEW TASK
 if (taskForm && taskInput && taskDate && taskTime) {
@@ -137,16 +189,22 @@ if (taskForm && taskInput && taskDate && taskTime) {
       taskDate.value === "" ||
       taskTime.value === ""
     ) {
+
       alert("Please complete all task fields.");
+
       return;
+
     }
 
     // ADD TASK TO THE ARRAY
     tasks.push({
 
       name: taskName,
+
       date: taskDate.value,
+
       time: taskTime.value,
+
       completed: false
 
     });
@@ -159,6 +217,7 @@ if (taskForm && taskInput && taskDate && taskTime) {
   });
 
 }
+
 
 // SHOW SAVED TASKS WHEN THE PAGE OPENS
 displayTasks();
