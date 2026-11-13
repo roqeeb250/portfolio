@@ -67,23 +67,27 @@
                 <h2>Contact Details</h2>
 
                 <p>
-                    You can reach me through the email address or
-                    phone number below.
+                    You can reach me through my email address
+                    or phone number below.
                 </p>
 
+
+                <!-- CLICKABLE EMAIL -->
                 <h3>Email</h3>
 
                 <p>
                     <a href="mailto:r.kareem1437@miva.edu.ng">
-                        r.kareem1437@miva.edu.ng
+                        ✉ r.kareem1437@miva.edu.ng
                     </a>
                 </p>
 
+
+                <!-- CLICKABLE PHONE -->
                 <h3>Phone</h3>
 
                 <p>
-                    <a href="tel:07017463806">
-                        07017463806
+                    <a href="tel:+2347017463806">
+                        ☎ 07017463806
                     </a>
                 </p>
 
@@ -174,7 +178,7 @@
     <script src="script.js"></script>
 
 
-    <!-- FORM VALIDATION -->
+    <!-- CONTACT FORM VALIDATION -->
     <script>
 
         const contactForm = document.getElementById("contact-form");
@@ -193,24 +197,41 @@
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 const phonePattern = /^[0-9]+$/;
 
+
+                // CHECK EMPTY FIELDS
                 if (!name || !email || !phone || !message) {
+
                     event.preventDefault();
+
                     status.textContent = "Please fill in all fields.";
+
                     return;
                 }
 
+
+                // CHECK EMAIL FORMAT
                 if (!emailPattern.test(email)) {
+
                     event.preventDefault();
+
                     status.textContent = "Please enter a valid email address.";
+
                     return;
                 }
 
+
+                // CHECK PHONE NUMBER
                 if (!phonePattern.test(phone)) {
+
                     event.preventDefault();
+
                     status.textContent = "Phone number must contain digits only.";
+
                     return;
                 }
 
+
+                // ALLOW FORM SUBMISSION
                 status.textContent = "Sending your message...";
 
             });
